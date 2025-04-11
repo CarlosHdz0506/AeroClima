@@ -1,0 +1,61 @@
+/*frontend/src/App.css*/
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* La imagen de avión ocupe toda la pantalla horizontalmente */
+#imagen-avion {
+  width: 100vw; /* Ocupa todo el ancho de la ventana (100% del ancho de la vista) */
+  height: 70vh; /* Ajusta el alto de la imagen al 70% de la altura de la ventana */
+  display: flex; /* Usa flexbox para alinear y distribuir elementos dentro del contenedor */
+  justify-content: center; /* Centra la imagen horizontalmente dentro del contenedor */
+  align-items: center; /* Centra la imagen verticalmente dentro del contenedor */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde fuera del contenedor */
+  position: relative; /* Posiciona el contenedor de manera relativa para un mejor control del contenido dentro de él */
+  background: #333; /* Color de fondo oscuro en caso de que la imagen no cargue */
+  margin: 0; /* Elimina los márgenes exteriores del contenedor */
+  margin-bottom: 2rem; /* Agrega un espacio de 2rem debajo de la imagen para separación */
+}
+
+.imagen-avion {
+  width: 100%; /* La imagen ocupa el 100% del ancho del contenedor */
+  height: 100%; /* La imagen ocupa el 100% del alto del contenedor */
+  object-fit: cover; /* La imagen cubre completamente el área del contenedor sin distorsionarse */
+}
+
+

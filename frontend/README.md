@@ -1,0 +1,1 @@
+La plataforma de AeroClima está diseñada para facilitar la consulta de vuelos y el clima de los destinos a las personas desean viajar. Ya no es necesario buscar en diferentes páginas, ya que aquí mismo se podrá obtener toda la información de manera rápida y sencilla.

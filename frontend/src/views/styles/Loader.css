@@ -1,0 +1,102 @@
+/* frontend/src/components/Loader.css */
+
+/* Contenedor principal del loader que cubre toda la pantalla */
+.loader-container {
+  position: fixed; /* Se mantiene fijo en pantalla, sin importar el scroll */
+  top: 0;
+  left: 0;
+  width: 100%; /* Cubre todo el ancho */
+  height: 100%; /* Cubre todo el alto */
+  display: flex; /* Usa flexbox para centrar contenido */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  background-color: #f0f8ff; /* Color de fondo claro */
+  z-index: 9999; /* Muy alto para aparecer encima de cualquier otro contenido */
+}
+
+/* Contenedor del loader que agrupa los elementos visuales */
+.loader {
+  display: flex;
+  flex-direction: column; /* Apila elementos verticalmente */
+  align-items: center; /* Centra elementos horizontalmente */
+  position: relative; /* Necesario para posicionar el avión encima */
+}
+
+/* Barra de carga horizontal animada */
+.loader-bar {
+  width: 100px; /* Ancho inicial */
+  height: 10px;
+  background-color: #0077cc; /* Azul corporativo */
+  border-radius: 5px; /* Bordes redondeados */
+  animation: loading-bar 3s infinite; /* Animación infinita que simula carga */
+  position: relative;
+}
+
+/* Contenedor de la animación del avión */
+.loader-animation {
+  position: absolute; /* Posición relativa al .loader */
+  top: -20px; /* Coloca el avión encima de la barra */
+  animation: plane-fly 3s infinite; /* Animación de vuelo oscilante */
+}
+
+/* Emoji del avión animado */
+.loader-plane {
+  font-size: 36px; /* Tamaño grande para que se vea bien */
+  animation: plane-move 3s infinite linear; /* Movimiento continuo */
+}
+
+/* Animación de expansión de la barra de carga */
+@keyframes loading-bar {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* Animación del avión moviéndose de un lado a otro */
+@keyframes plane-fly {
+  0% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+/* Movimiento lineal del avión hacia la derecha */
+@keyframes plane-move {
+  0% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+/* Texto "AeroClima Cargando..." */
+.loading-text {
+  margin-top: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0077cc;
+  text-align: center;
+  animation: fade-in 2s ease-out; /* Efecto de aparición gradual */
+}
+
+/* Animación para que el texto aparezca suavemente */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

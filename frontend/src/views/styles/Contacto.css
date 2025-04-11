@@ -1,0 +1,108 @@
+/* Contacto */
+.contacto-section {
+  width: 100%; /* Asegura que la sección ocupe todo el ancho disponible */
+  background-color: #2a5298; /* Define el color de fondo azul */
+  color: white; /* Define el color del texto en blanco */
+  padding: 2rem; /* Agrega un relleno de 2rem alrededor de la sección */
+  text-align: center; /* Centra el texto dentro de la sección */
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1); /* Agrega una sombra en la parte superior */
+  margin-top: 2rem; /* Agrega un margen superior de 2rem */
+  position: relative; /* Establece la posición del contenedor como relativa */
+  box-sizing: border-box; /* Asegura que el relleno y los bordes se incluyan en el tamaño total */
+  border-bottom: 4px solid #f0b40c; /* Agrega un borde inferior de color dorado */
+}
+
+/* El contenido de contacto */
+.contacto-content {
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  max-width: 1200px; /* Establece un ancho máximo de 1200px */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 0 15px; /* Agrega un relleno de 15px a los lados */
+}
+
+.contacto-header {
+  font-size: 2.5rem; /* Establece el tamaño de fuente para el encabezado */
+  margin-bottom: 1rem; /* Agrega un margen inferior de 1rem */
+  font-weight: bold; /* Hace que el texto del encabezado sea negrita */
+  color: white; /* Establece el color del texto como blanco */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aplica una sombra sutil al texto */
+}
+
+.contacto-description {
+  font-size: 1.2rem; /* Establece el tamaño de fuente para la descripción */
+  margin-bottom: 2rem; /* Agrega un margen inferior de 2rem */
+  color: #e0e0e0; /* Establece el color del texto en gris claro */
+  line-height: 1.5; /* Define el interlineado para mejorar la legibilidad */
+}
+
+.contacto-info {
+  background-color: #1c3b70; /* Establece un fondo de color azul oscuro */
+  padding: 1.5rem; /* Agrega un relleno de 1.5rem dentro del contenedor */
+  border-radius: 8px; /* Redondea las esquinas del contenedor */
+  margin-bottom: 2rem; /* Agrega un margen inferior de 2rem */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Aplica una sombra suave alrededor del contenedor */
+  transition: all 0.3s ease-in-out; /* Agrega una transición suave para los efectos */
+}
+
+.contacto-info:hover {
+  transform: scale(1.05); /* Aumenta el tamaño del contenedor al pasar el ratón */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); /* Aumenta la sombra al pasar el ratón */
+}
+
+.contacto-info p {
+  margin: 0.8rem 0; /* Agrega un margen de 0.8rem arriba y abajo de cada párrafo */
+  font-size: 1rem; /* Establece el tamaño de la fuente en 1rem */
+}
+
+.contacto-info strong {
+  color: #f1f1f1; /* Establece el color del texto en negrita en blanco */
+}
+
+.contacto-redes .contacto-social-text {
+  font-size: 1.1rem; /* Establece el tamaño de la fuente para el texto social */
+  margin-bottom: 1rem; /* Agrega un margen inferior de 1rem */
+}
+
+.contacto-redes ul {
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el relleno por defecto de la lista */
+}
+
+.contacto-redes li {
+  margin: 0.5rem 0; /* Agrega un margen de 0.5rem arriba y abajo de cada lista */
+}
+
+.contacto-redes a {
+  color: #ffffff; /* Establece el color de los enlaces en blanco */
+  font-size: 1.1rem; /* Establece el tamaño de la fuente para los enlaces */
+  text-decoration: none; /* Elimina la decoración del texto (subrayado) */
+  transition: color 0.3s ease; /* Aplica una transición suave al color */
+}
+
+.contacto-redes a:hover {
+  text-decoration: underline; /* Subraya el enlace al pasar el ratón */
+  color: #f0b40c; /* Cambia el color del enlace a dorado cuando se pasa el ratón */
+}
+
+/* Media query para pantallas más pequeñas (menos de 768px) */
+@media (max-width: 768px) {
+  .contacto-section {
+    padding: 1.5rem; /* Reduce el relleno de la sección en pantallas pequeñas */
+  }
+
+  .contacto-header {
+    font-size: 2rem; /* Reduce el tamaño de la fuente del encabezado */
+  }
+
+  .contacto-description {
+    font-size: 1rem; /* Reduce el tamaño de la fuente de la descripción */
+  }
+
+  .contacto-info p {
+    font-size: 0.9rem; /* Reduce el tamaño de la fuente de los párrafos */
+  }
+
+  .contacto-redes a {
+    font-size: 1rem; /* Reduce el tamaño de la fuente de los enlaces */
+  }
+}

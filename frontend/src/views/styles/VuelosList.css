@@ -1,0 +1,295 @@
+/* Contenedor principal de la sección de vuelos */
+.vuelos-container {
+    width: 90%; /* El contenedor ocupa el 90% del ancho disponible */
+    max-width: 700px; /* Pero no supera los 700px */
+    margin: 0 auto; /* Centrado horizontalmente */
+    padding: 5vw; /* Relleno interno proporcional al ancho de la pantalla */
+    text-align: center; /* Centra el texto */
+    background-color: #ffffff; /* Fondo blanco */
+    border-radius: 16px; /* Bordes redondeados */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border: 2px dotted #d3d3d3; /* Borde punteado gris claro */
+}
+
+/* Estilo para el título dentro del contenedor */
+.vuelos-container h2 {
+    font-size: 2rem; /* Tamaño de fuente grande */
+    margin-bottom: 1.25rem; /* Espacio inferior */
+    color: #007bff; /* Azul (bootstrap primary) */
+}
+
+/* Estilos del formulario */
+.form-vuelos {
+    display: flex; /* Usa Flexbox */
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    gap: 12px; /* Espacio entre campos */
+    margin-bottom: 30px; /* Margen inferior */
+}
+
+/* Estilos de los inputs del formulario */
+.form-vuelos input {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    max-width: 400px; /* Máximo ancho */
+    padding: 12px; /* Relleno interno */
+    font-size: 1rem; /* Tamaño de fuente */
+    border: 2px solid #ccc; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco */
+    transition: border 0.3s ease; /* Transición suave del borde */
+}
+
+/* Estilo cuando un input está enfocado */
+.form-vuelos input:focus {
+    border-color: #007bff; /* Borde azul al hacer foco */
+    outline: none; /* Elimina el contorno por defecto */
+}
+
+/* Estilo del botón de buscar vuelos */
+.form-vuelos button {
+    padding: 12px 24px; /* Relleno vertical y horizontal */
+    font-size: 1rem; /* Tamaño de fuente */
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano al pasar encima */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Cambio de color al pasar el mouse por el botón */
+.form-vuelos button:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+}
+
+/* Tarjeta que muestra la información de cada vuelo */
+.vuelo-card {
+    border: 2px dotted #d3d3d3; /* Borde punteado */
+    border-radius: 16px; /* Bordes redondeados */
+    padding: 24px; /* Relleno interno */
+    margin: 16px 0; /* Margen vertical */
+    background-color: #f9f9f9; /* Fondo gris muy claro */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    font-family: 'Arial', sans-serif; /* Fuente */
+    position: relative; /* Necesario para ::before y ::after */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+/* Efecto al pasar el mouse por la tarjeta */
+.vuelo-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más fuerte */
+    transform: translateY(-4px); /* Eleva ligeramente la tarjeta */
+}
+
+/* Barra con información del vuelo */
+.barra-vuelo {
+    display: flex; /* Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+    justify-content: space-between; /* Espacio entre elementos */
+    align-items: center; /* Centra verticalmente */
+    background-color: #fff; /* Fondo blanco */
+    padding: 16px; /* Relleno interno */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-top: 12px; /* Margen superior */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #333; /* Texto gris oscuro */
+    gap: 12px; /* Espacio entre elementos */
+}
+
+/* Estilos comunes para salida, llegada y duración */
+.hora-salida, .hora-llegada, .duracion {
+    font-weight: bold; /* Negrita */
+    color: #007bff; /* Azul */
+    font-size: 1rem; /* Tamaño de fuente */
+}
+
+/* Estilos específicos para hora de salida y llegada */
+.hora-salida, .hora-llegada {
+    width: 100px; /* Ancho fijo */
+    text-align: center; /* Texto centrado */
+    padding: 8px; /* Relleno */
+    background-color: #007bff; /* Fondo azul */
+    color: white; /* Texto blanco */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+/* Estilo para la duración */
+.duracion {
+    text-align: center; /* Texto centrado */
+    flex-grow: 1; /* Ocupa el espacio restante */
+    margin: 0 10px; /* Margen horizontal */
+}
+
+/* Sección de detalles adicionales */
+.vuelo-detalles {
+    margin-top: 12px;
+    background-color: #e6f7ff; /* Fondo celeste claro */
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Botones de la tarjeta */
+.btn-detalles, .btn-mostrar-mas {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Botón de ver detalles */
+.btn-detalles {
+    background-color: #007bff;
+    color: white;
+    margin-top: 12px;
+}
+
+.btn-detalles:hover {
+    background-color: #0056b3;
+}
+
+/* Botón de mostrar más vuelos */
+.btn-mostrar-mas {
+    margin-top: 16px;
+    background-color: #28a745; /* Verde */
+    color: white;
+}
+
+.btn-mostrar-mas:hover {
+    background-color: #218838; /* Verde más oscuro */
+}
+
+/* Decoración superior de la tarjeta (etiqueta tipo "boleto") */
+.vuelo-card::before {
+    content: "Boleto de vuelo";
+    font-size: 1rem;
+    position: absolute;
+    top: -18px;
+    left: 16px;
+    background-color: #007bff;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Decoración con emoji de avión */
+.vuelo-card::after {
+    content: "✈️";
+    font-size: 1.5rem;
+    color: #007bff;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    transform: rotate(45deg); /* Gira el emoji */
+}
+
+/* Descripción del vuelo */
+.descripcion {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.descripcion:hover {
+    color: #007bff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Nota sobre los códigos IATA */
+.nota-iata {
+    font-size: 0.875rem;
+    color: #666;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    padding-left: 10px;
+    border-left: 3px solid #007bff;
+    background-color: #f1f9ff;
+    transition: all 0.3s ease-in-out;
+}
+
+.nota-iata:hover {
+    color: #0056b3;
+    background-color: #e6f7ff;
+}
+
+/* Mensajes de estado: cargando y errores */
+.cargando, .cargando-message, .error-message {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.cargando {
+    color: #2a5298;
+}
+
+.cargando-message {
+    color: #007bff;
+}
+
+.error-message {
+    color: red;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Ajustes para tablets */
+@media (max-width: 768px) {
+    .barra-vuelo {
+        flex-direction: column; /* Elementos en columna */
+        text-align: center;
+    }
+
+    .hora-salida,
+    .hora-llegada,
+    .duracion {
+        width: 100%; /* Ancho completo */
+        margin: 4px 0; /* Margen vertical */
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 480px) {
+    .form-vuelos input {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .form-vuelos button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .btn-detalles,
+    .btn-mostrar-mas {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    .vuelo-card::after {
+        font-size: 1.2rem;
+        top: 8px;
+        right: 12px;
+    }
+
+    .vuelo-card::before {
+        font-size: 0.9rem;
+        top: -14px;
+        padding: 6px;
+    }
+
+    .descripcion,
+    .nota-iata {
+        font-size: 0.95rem;
+    }
+}

@@ -1,0 +1,59 @@
+/* Ajuste del slider */
+.slider-header {
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* Fondo con degradado azul de izquierda a derecha */
+  color: white; /* Color de texto blanco */
+  padding: 40px 20px; /* Espaciado interno arriba/abajo y laterales */
+  text-align: center; /* Centra el texto horizontalmente */
+  margin-top: 0; /* Elimina el margen superior */
+}
+
+.slider-container {
+  max-width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.slider-content h2 {
+  font-size: 2rem; /* Tamaño grande para el título */
+  margin-bottom: 10px; /* Espacio inferior entre el título y la descripción */
+  color: white; /* Asegura que el color del título sea blanco */
+}
+
+.slider-description {
+  font-size: 1.1rem; /* Tamaño de fuente ligeramente mayor al normal */
+  margin-bottom: 20px; /* Espacio entre la descripción y el botón */
+  color: white; /* Color blanco para la descripción */
+}
+
+.slider-button {
+  background-color: transparent; /* Fondo transparente para el botón */
+  color: white; /* Texto blanco */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  font-weight: bold; /* Texto en negrita */
+  border: 2px solid white; /* Borde blanco grueso */
+  border-radius: 25px; /* Bordes redondeados estilo pill */
+  cursor: pointer; /* Cambia el cursor a pointer al pasar por encima */
+  transition: background 0.3s, color 0.3s; /* Animación suave al cambiar fondo y color */
+}
+
+.slider-button:hover {
+  background-color: white; /* Al pasar el mouse, fondo blanco */
+  color: #2a5298; /* Y texto azul oscuro */
+}
+
+.slider-dots {
+  margin-top: 20px; /* Espacio entre los puntos y el contenido del slider */
+}
+
+.dot {
+  height: 15px; /* Altura del punto */
+  width: 15px; /* Ancho del punto */
+  margin: 0 5px; /* Espacio horizontal entre puntos */
+  background-color: #ccc; /* Color gris claro por defecto */
+  border-radius: 50%; /* Hace que sea perfectamente circular */
+  display: inline-block; /* Se colocan en línea */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.dot.active {
+  background-color: white; /* Punto activo tiene fondo blanco */
+}

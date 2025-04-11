@@ -1,0 +1,242 @@
+/* Contenedor principal del clima */
+.clima-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #ffffff; /* Fondo blanco, siguiendo la paleta de colores */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
+    transition: box-shadow 0.3s ease; /* Transición para efecto hover */
+}
+
+.clima-container:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+}
+
+/* Encabezado principal */
+.clima-header {
+    font-size: 2rem;
+    color: #2a5298; /* Azul corporativo */
+    margin-bottom: 10px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.clima-header:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+/* Descripción del clima */
+.clima-description {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 25px;
+    line-height: 1.8;
+    text-align: center;
+    padding: 15px 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #fafafa, #f5f5f5); /* Fondo degradado claro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    transition: all 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.clima-description:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px);
+    background: linear-gradient(135deg, #f5f5f5, #fafafa); /* Cambio sutil al pasar el mouse */
+}
+
+/* Formulario de búsqueda */
+.clima-form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Campo de texto del formulario */
+.clima-input {
+    padding: 12px;
+    font-size: 1rem;
+    width: 220px;
+    margin-right: 15px;
+    border: 1px solid #2a5298;
+    border-radius: 25px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clima-input:focus {
+    border-color: #ff6600; /* Color naranja al enfocar */
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.6);
+}
+
+/* Botón del formulario */
+.clima-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.clima-button:hover {
+    background-color: #1e3c72;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mensaje de error */
+.clima-error {
+    color: red;
+    font-size: 1rem;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Información del clima */
+.clima-info {
+    margin-top: 20px;
+}
+
+/* Nombre de la ciudad */
+.clima-city {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Contenedor de detalles del clima */
+.clima-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.clima-details:hover {
+    transform: scale(1.05);
+}
+
+/* Contenedor del ícono del clima */
+.clima-icon-container {
+    background-color: rgba(42, 82, 152, 0.7);
+    padding: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.clima-icon-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen del ícono */
+.clima-icon {
+    width: 60px;
+    height: 60px;
+}
+
+/* Temperatura */
+.clima-temp {
+    font-size: 2.5rem;
+    color: #2a5298;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.clima-temp:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+/* Descripción, humedad y viento */
+.clima-desc,
+.clima-humidity,
+.clima-wind {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.clima-desc:hover,
+.clima-humidity:hover,
+.clima-wind:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Colores específicos */
+.clima-desc {
+    color: #007bb5;
+}
+
+.clima-humidity {
+    color: #4f83cc;
+}
+
+.clima-wind {
+    color: #1e3c72;
+}
+
+/* Botón para cambiar unidad de medida */
+.clima-toggle-unit {
+    margin-top: 25px;
+    padding: 12px 28px;
+    font-size: 1.2rem;
+    background-color: #2a5298;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.clima-toggle-unit:hover {
+    background-color: #1e3c72;
+    transform: scale(1.05);
+}
+
+/* Mensaje de carga */
+.clima-loading {
+    font-size: 1.2rem;
+    color: #2a5298;
+    margin-top: 20px;
+}
+
+/* Recomendaciones según clima */
+.clima-recomendacion {
+    background-color: #f0f4f8;
+    padding: 25px 30px;
+    margin-top: 30px;
+    border-radius: 18px;
+    font-size: 1.2rem;
+    color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.clima-recomendacion strong {
+    font-weight: bold;
+}
+
+.clima-recomendacion:hover {
+    background-color: #0077cc;
+    color: #ffffff;
+    transform: scale(1.02);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
